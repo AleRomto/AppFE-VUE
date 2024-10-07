@@ -1,85 +1,80 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Apps</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <router-link class="nav-link" to="/">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/about">About</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/ejercicio1">Contador</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/parent">Parent/Child</router-link>
+          </li>
+        </ul>
+      </div>
     </div>
-  </header>
-
-  <RouterView />
+  </nav>
+    <router-view /> <!-- Este es el punto donde se cargarán las vistas -->
+  </div>
 </template>
 
+<script>
+import HomeView from './views/HomeView.vue';
+import AboutView from './views/AboutView.vue';
+import Ejercicio1View from './components/Ejercicio1View.vue'; // Importa Ejercicio1View
+import ParentView from './components/ParentView.vue'; // Importa ParentView
+
+export default {
+  name: 'App',
+  components: {
+    HomeView,
+    AboutView,
+    Ejercicio1View,
+    ParentView,
+  },
+};
+</script>
+
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Color de fondo suave */
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.navbar {
+  margin-bottom: 20px; /* Espacio en la parte inferior del navbar */
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.nav-link {
+  margin-right: 15px; /* Espacio entre los enlaces */
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.navbar-brand {
+  font-weight: bold; /* Negrita para el nombre de la aplicación */
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+h1 {
+  color: #333; /* Color del texto */
 }
 </style>
+
