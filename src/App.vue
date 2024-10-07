@@ -32,15 +32,15 @@
       </div>
     </div>
   </nav>
-    <router-view /> <!-- Este es el punto donde se cargarán las vistas -->
+    <router-view /> 
   </div>
 </template>
 
 <script>
 import HomeView from './views/HomeView.vue';
 import AboutView from './views/AboutView.vue';
-import Ejercicio1View from './components/Ejercicio1View.vue'; // Importa Ejercicio1View
-import ParentView from './components/ParentView.vue'; // Importa ParentView
+import Ejercicio1View from './components/Ejercicio1View.vue';
+import ParentView from './components/ParentView.vue'; 
 
 export default {
   name: 'App',
@@ -56,25 +56,25 @@ export default {
 <style scoped>
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4; /* Color de fondo suave */
+  background-color: #f4f4f4; 
   margin: 0;
   padding: 0;
 }
 
 .navbar {
-  margin-bottom: 20px; /* Espacio en la parte inferior del navbar */
+  margin-bottom: 20px;
 }
 
 .nav-link {
-  margin-right: 15px; /* Espacio entre los enlaces */
+  margin-right: 15px; 
 }
 
 .navbar-brand {
-  font-weight: bold; /* Negrita para el nombre de la aplicación */
+  font-weight: bold; 
 }
 
 h1 {
-  color: #333; /* Color del texto */
+  color: #333;
 }
 </style>
 

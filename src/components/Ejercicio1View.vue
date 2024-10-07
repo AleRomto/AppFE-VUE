@@ -30,23 +30,23 @@ export default {
 
 <style scoped>
 .counter-container {
-  padding: 20px; /* Espaciado interno */
-  border: 1px solid #007bff; /* Borde azul */
-  border-radius: 10px; /* Bordes redondeados */
-  background-color: #f8f9fa; /* Color de fondo claro */
-  max-width: 400px; /* Máxima anchura */
-  margin: 20px auto; /* Centrado en la página */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  text-align: center; /* Centra el texto */
+  padding: 20px; 
+  border: 1px solid #007bff; 
+  border-radius: 10px; 
+  background-color: #f8f9fa; 
+  max-width: 400px; 
+  margin: 20px auto; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
 }
 
 .button-group {
-  display: flex; /* Usa flexbox para alinear los botones */
-  justify-content: center; /* Centra los botones horizontalmente */
-  gap: 10px; /* Espaciado entre los botones */
+  display: flex; 
+  justify-content: center; 
+  gap: 10px; 
 }
 
 button {
-  min-width: 100px; /* Ancho mínimo para los botones */
+  min-width: 100px;
 }
 </style>

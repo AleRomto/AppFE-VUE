@@ -1,8 +1,10 @@
 import { createStore } from 'vuex';
 
 export default createStore({
-  state: {
-    contador: 0,
+  state() {
+    return {
+      contador: 0,
+    };
   },
   mutations: {
     incrementar(state) {

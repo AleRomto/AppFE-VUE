@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import { createApp } from 'vue';
-import App from '@/App.vue'; // Verifica que esta ruta sea correcta
-import router from '@/router'; // Asegúrate de importar tu router correctamente
+import App from '@/App.vue'; 
+import router from '@/router'; 
 
 describe('Router', () => {
   let app;
@@ -9,8 +9,8 @@ describe('Router', () => {
   beforeEach(() => {
     app = createApp(App);
     app.use(router);
-    router.push('/'); // Asegúrate de empujar a la ruta deseada
-    return router.isReady(); // Espera a que el router esté listo
+    router.push('/'); 
+    return router.isReady(); 
   });
 
   it('debería contener la ruta "/"', () => {

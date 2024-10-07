@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import ChildView from './ChildView.vue'; // Importa ChildView
+import ChildView from './ChildView.vue'; // importa ChildView
 
 export default {
   name: 'ParentView',
@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     receiveText(text) {
-      this.receivedText = text; // Guarda el texto recibido
+      this.receivedText = text; // guarda el texto recibido
     },
   },
 };
@@ -29,12 +29,12 @@ export default {
 
 <style scoped>
 .parent-container {
-  padding: 20px; /* Espaciado interno */
-  border: 1px solid #007bff; /* Borde azul */
-  border-radius: 10px; /* Bordes redondeados */
-  background-color: #f8f9fa; /* Color de fondo claro */
-  max-width: 600px; /* Máxima anchura */
-  margin: 20px auto; /* Centrado en la página */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  padding: 20px;
+  border: 1px solid #007bff; 
+  border-radius: 10px; 
+  background-color: #f8f9fa;
+  max-width: 600px; 
+  margin: 20px auto; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 </style>

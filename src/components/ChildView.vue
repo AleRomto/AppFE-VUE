@@ -17,8 +17,8 @@ export default {
   },
   methods: {
     sendText() {
-      this.$emit('text-sent', this.inputText); // Emite el texto al componente padre
-      this.inputText = ''; // Limpia el campo de texto
+      this.$emit('text-sent', this.inputText); // envía el texto al componente parent
+      this.inputText = ''; // limpia el campo de texto
     },
   },
 };
@@ -26,15 +26,15 @@ export default {
 
 <style scoped>
 .child-container {
-  padding: 20px; /* Espaciado interno */
-  border: 1px solid #28a745; /* Borde verde */
-  border-radius: 10px; /* Bordes redondeados */
-  background-color: #fff; /* Color de fondo blanco */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  margin-top: 20px; /* Margen superior */
+  padding: 20px; 
+  border: 1px solid #28a745; 
+  border-radius: 10px; 
+  background-color: #fff; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  margin-top: 20px; 
 }
 
 input {
-  margin-bottom: 10px; /* Espaciado inferior para el input */
+  margin-bottom: 10px; 
 }
 </style>
